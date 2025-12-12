@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الخريطة القضائية – SWIMA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #map { width: 100%; height: 400px; }
+    </style>
+</head>
+<body>
+    <h1>دليل المجالس القضائية</h1>
+
+    <select id="courtSelect">
+        <option value="">اختر ولاية …</option>
+        <!-- تُملأ من data/references.json -->
+    </select>
+
+    <div id="map"></div>
+
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        // عند اختيار محكمة، يُعيد تحميل Standard Map في #map
+        document.getElementById('courtSelect').addEventListener('change', function(){
+            const selected = this.value;
+            if(selected){
+                const iframe = document.createElement('iframe');
+                iframe.src = selected;
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.allowFullscreen = true;
+                document.getElementById('map').innerHTML = iframe;
+            }
+        });
+    </script>
+</body>
+</html>
