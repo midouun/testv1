@@ -1,0 +1,13 @@
+{
+    "officialLinks": [
+        {"name":"الجريدة الرسمية","url":"https://www.legifrance.gouv.fr"},
+        {"name":"المحكمة العليا","url":"https://www.courtsupreme.dz"},
+        {"name":"مجلس الدولة","url":"https://www.conseilstate.dz"},
+        {"name":"ASJP","url":"https://www.asjp.dz"}
+    ],
+    "courts": [
+        {"name":"مجلس قضاء الجزائر","url":"https://maps.google.com/?q=الجزائر"},
+        {"name":"مجلس قضاء عنابة","url":"https://maps.google.com/?q=عنابة"},
+        // … باقي 56 ولاية
+    ]
+}
