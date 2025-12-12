@@ -1,0 +1,64 @@
+/* ---------- ألوان أساسية ---------- */
+:root{
+    --primary:#004080;
+    --secondary:#0099ff;
+    --bg:#f9f9f9;
+    --text:#333;
+    --dark-bg:#121212;
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark){
+    :root{
+        --bg:#1e1e1e;
+        --text:#e0e0e0;
+    }
+}
+
+/* ---------- تنسيقات عامة ---------- */
+body{
+    font-family: "CustomFont", Arial, sans-serif;
+    direction: rtl;
+    background: var(--bg);
+    color: var(--text);
+    margin:0;
+    padding:0;
+}
+a{ color:var(--secondary); text-decoration:none;}
+a:hover{ text-decoration:underline; }
+
+.container{ max-width:1200px; margin:auto; padding:1rem; }
+h1,h2,h3{ color:var(--primary); }
+nav.main-nav a{ margin-right:1rem; }
+
+/* ---------- شريط المبادئ الفقهية ---------- */
+#principles-bar{
+    background:var(--primary);
+    padding:0.5rem;
+}
+#principles-bar ul{ list-style:none; margin:0; padding:0; }
+#principles-bar li{ color:#fff; margin-right:1rem; }
+
+/* ---------- وضع ليلي يدوي (زر) ---------- */
+#toggle-dark{
+    position:fixed; bottom:1rem; right:1rem;
+    background:var(--secondary); color:#fff;
+    border:none; padding:0.5rem 1rem;
+    cursor:pointer;
+}
+
+/* ---------- شبكة الجدول ---------- */
+.schedule-table{
+    width:100%;
+    border-collapse:collapse;
+}
+.schedule-table th, .schedule-table td{
+    border:1px solid #ccc;
+    padding:0.5rem;
+    text-align:center;
+}
+
+/* ---------- موضع البحث ---------- */
+#quick-search{ margin:1rem 0; }
+#quick-search input{ padding:0.5rem; width:70%; }
+#quick-search button{ padding:0.5rem; }
