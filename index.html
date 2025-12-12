@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>SWIMA – منصة قانونية للطلبة الجزائريين</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- شريط المبادئ الفقهية المتحرك -->
+    <header id="principles-bar">
+        <marquee behavior="scroll" scrollamount="3" loop="infinite">
+            <ul>
+                <li>العقد شريعة المتعاقدين</li>
+                <li>لا جريمة إلا بنص</li>
+                <li>الملكية الخاصة لا تُستkve</li>
+                … (يُملأ تلقائياً من data/principles.json)
+            </ul>
+        </marquee>
+    </header>
+
+    <!-- تنقل بين الأقسام -->
+    <nav class="main-nav">
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="schedule.html">الجدول الدراسي</a>
+        <a href="resources.html">المصادر</a>
+        <a href="map.html">الخريطة القضائية</a>
+        <a href="about.html">من نحن</a>
+    </nav>
+
+    <!-- محرك البحث الفوري -->
+    <section id="quick-search">
+        <input type="text" placeholder="ابحث عن مقياس أو ملخص…">
+        <button onclick="search()">بحث</button>
+        <div id="results"></div>
+    </section>
+
+    <!--Contact Buttons -->
+    <section class="contact-links">
+        <a href="#" target="_blank">تيليجرام</a>
+        <a href="#" target="_blank">فيسبوك</a>
+        <a href="mailto:info@swima.dz">b.m.akid@example.com</a>
+    </section>
+
+    <!-- الوضع الليلي (زر تبديل) -->
+    <button id="toggle-dark">الوضع الليلي</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
